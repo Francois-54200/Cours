@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ <html>
+<head>
+<meta charset="UTF-8">
+<title>
+	Exemple de fonctions et evenements
+</title>
+
+</head>
+<body>
+<h1>Page de test des fonctions et evenements</h1>
+<div id="test"> </div>
+<script>
+/**************************************/
+/*            Exemple 1               */
+/**************************************/
+
+
+var x = 3;
+var y = 2;
+var f = 12;
+var g = 51;
+
+document.getElementById("test").innerHTML+="Le résultat de "+x+" + "+y+" est : "+addition(x,y)+"<br/>";
+document.getElementById("test").innerHTML+="Le résultat de "+f+" + "+g+" est : "+addition(f,g)+"<br/>";
+
+function addition(a,b) {
+    var c = (+a)+(+b);
+    return c;
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.horloge{
+    position: absolute;
+    border: solid 5px black;
+    width: 400px;
+    height: 400px;
+    background:white;
+    border-radius: 50%;
+   
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+.horloge::after{
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 2px black;
+    background: white;
+
+}
+
+/*.horloge::before{
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 91%;
+    height: 91%;
+    border-radius: 50%;
+    border: solid 2px red;
+}
+
+/*.regle{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: rotate(150deg);
+    width: 0;
+    height: 600px;
+    border: solid 2px black;
+
+}*/
+
+.chiffre1{
+    position: absolute;
+    font-weight: bold;
+    top: 6%;
+    bottom:0;
+    left:70.5%;
+    right: 0;
+}
+
+.chiffre2{
+    position: absolute;
+    font-weight: bold;
+    top: 20%;
+    bottom:0;
+    left: 86.5%;
+    right: 0;
+}
+
+.chiffre3{
+    position: absolute;
+    font-weight: bold;
+    top: 44%;
+    bottom:0;
+    left: 94%;
+    right: 0;
+}
+
+.chiffre4{
+    position: absolute;
+    font-weight: bold;
+    top: 68%;
+    bottom:0;
+    left:88%;
+    right: 0;
+}
+
+.chiffre5{
+    position: absolute;
+    font-weight: bold;
+    top: 86%;
+    bottom:0;
+    left: 70%;
+    right: 0;
+}
+
+.chiffre6{
+    position: absolute;
+    font-weight: bold;
+    top: 92%;
+    bottom:0;
+    left: 48%;
+    right: 0;
+}
+
+.chiffre7{
+    position: absolute;
+    font-weight: bold;
+    top: 84%;
+    bottom:0;
+    left: 25%;
+    right: 0;
+}
+
+.chiffre8{
+    position: absolute;
+    font-weight: bold;
+    top: 67%;
+    bottom:0;
+    left: 8%;
+    right: 0;
+}
+
+.chiffre9{
+    position: absolute;
+    font-weight: bold;
+    top: 44%;
+    bottom:0;
+    left:2%;
+    right: 0;
+}
+
+.chiffre10{
+    position: absolute;
+    font-weight: bold;
+    top: 22%;
+    bottom:0;
+    left: 7%;
+    right: 0;
+}
+
+.chiffre11{
+    position: absolute;
+    font-weight: bold;
+    top: 7%;
+    bottom:0;
+    left: 23.5%;
+    right: 0;
+}
+
+.chiffre12{
+    position: absolute;
+    font-weight: bold;
+    top: 1%;
+    bottom:0;
+    left: 47%;
+    right: 0;
+}
+
+.mesch{
+    font-size: 25px;
+}
+
+.heure{
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 30%;
+    bottom: 0;
+    right: 0;
+    width: 35%;
+    height: 0%;
+    border: solid 5px blue;
+    transform-origin: 10%;
+    /*transform: rotate();
+    /*animation: spin 84600s linear infinite;*/
+}
+
+.minute{
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 30%;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 0%;
+    border: solid 3px black;
+    transform-origin: 21%;
+    /*transform: rotate();
+    /*animation: spin 3600s linear infinite;*/
+}
+
+.seconde{
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 35%;
+    bottom: 0;
+    right: 0;
+    width: 42%;
+    height: 0%;
+    animation: spin 60s linear infinite;
+    /*border-radius: 50%;*/
+    border: solid 2px red;
+    transform-origin: 9.5%;
+    /*transform: rotate();
+}
+
+/*.heure spin {
+    animation: spin 6s linear infinite;
+}*/
+/*
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+}
+    to {
+      transform: rotate(360deg);
+    }*/
+}
+
+@media (max-width: 600px) {
+    .horloge{
+        width:200px;
+        height: 200px;
+    }
+    .mesch{
+      font-size: 12.5px;  
+    }
+}

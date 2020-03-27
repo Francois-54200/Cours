@@ -1,0 +1,104 @@
+body{
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+   margin: 0;
+   width: 100%;
+   height: 500px;
+}
+
+
+.cadre{
+    position: absolute;
+    width: 100%;
+    height:100%;
+}
+
+
+.maison{
+    width:200px;
+    height:200px;
+    background:#ffff99;
+    position: absolute;
+    top:50%;
+    left: 30px;
+}
+
+.toit{
+    width:1px;
+    height:1px;
+    border:1px solid #cc3300;
+    border-color:transparent
+    transparent #cc3300 transparent;
+    border-width:100px;
+    position: absolute;
+    top: 18%;
+    left: 30px;
+}
+
+.porte{
+    width: 25px;
+    height: 50px;   
+    top: 74%;
+    left: 120px;
+    position: absolute;
+    background: #800080;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #ffc0cb, #800080);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #ffc0cb, #800080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.fenetrecarre{
+    width: 30px;
+    height: 30px;
+    background: #0066ff;
+    position: absolute;
+    top: 60%;
+    left: 60px;
+}
+
+.fenetreronde{
+    width: 30px;
+    height: 30px;
+    background: #ff00ff;
+    border-radius: 30px;
+    position: absolute;
+    top: 60%;
+    left: 170px;
+}
+
+.terrain{
+    width: 100%;
+    height: 110px;
+    background: #009900;
+    position: absolute;
+    top: 82%;
+}
+
+.tronc{
+    width: 40px;
+    height: 200px;
+    background: #802000;
+    position: absolute;
+    left: 420px;
+    top: 55%;
+}
+
+.feuille{
+    width: 100px;
+    height: 200px;
+    background: #009900;
+    border-radius: 50px/100px;
+    position: absolute;
+    left: 390px;
+    top: 25%;
+}
+
+.soleil{
+    width: 100px;
+    height: 100px;
+    background: #ffff00;
+    border-radius: 100px;
+    position: absolute;
+}

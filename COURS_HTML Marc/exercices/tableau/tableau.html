@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+    
+	<!-- Pour l'encodage en UTF-8 -->
+    <meta content="text/html; charset=UTF-8">
+    
+	<!-- Pour responsive -->
+	<meta name="viewport" content= "width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+	<!-- titre de la page -->
+    <title>Exercie Tableau</title>
+    
+    <!-- Custom CSS -->
+    <link href="./css/tableau.css" rel="stylesheet">
+    
+    <!-- Custom JS -->
+    <script src="./js/tableau.js"></script>
+	
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <!-- Page Internet -->
+        <div class="bg">
+
+            <!-- Cadre dans page internet qui représente la page internet -->
+            <div class="table-box">
+
+                <!-- Tableau -->
+                <div class="table-main">
+
+                    <table class="table-table">
+                        <tr class="tr-title">
+
+                            <th class="th-day">&nbsp;</th>
+                            <th class="th-name">Nom</th>
+                            <th class="th-first">Prénom</th>
+                            <th class="th-age">Age</th>
+                            <th class="th-time">Heure</thr>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="th-day">Lundi</td>
+                            <td class="th-name">Steinbach</td>
+                            <td class="th-first">François</td>
+                            <td class="th-age">40</td>
+                            <td class="th-time"><div class="in-box"> <input type="text" id="in1" class="in-time" value="5.15" onkeyup="somme()"></div> </td>
+                            
+                        </tr>
+
+                        <tr>
+                            
+                            <td class="th-day">Mardi</td>
+                            <td class="th-name">Steinbach</td>
+                            <td class="th-first">François</td>
+                            <td class="th-age">40</td>
+                            <td class="th-time"><div class="in-box"> <input type="text" id="in2" class="in-time" value="3.75" onkeyup="somme()"></div> </td>
+                            
+                        </tr>
+
+                        <tr class="tr-middle">
+                            
+                            <td class="th-day" >Mercredi</td>
+                            <td colspan="4"></td>
+                                                        
+                        </tr>
+
+                        <tr>
+                            
+                            <td class="th-day">Jeudi</td>
+                            <td class="th-name">Steinbach</td>
+                            <td class="th-first">François</td>
+                            <td class="th-age">40</td>
+                            <td class="th-time"><div class="in-box"> <input type="text" id="in3" class="in-time" value="4" onkeyup="somme()"></div> </td>
+                            
+                        </tr>
+
+                        <tr>
+                            
+                            <td class="th-day">Vendredi</td>
+                            <td class="th-name">Steinbach</td>
+                            <td class="th-first">François</td>
+                            <td class="th-age">40</td>
+                            <td class="th-time"><div class="in-box"> <input type="text" id="in4" class="in-time" value="6.25" onkeyup="somme()"></div> </td>
+                            
+                        </tr>
+
+                        <tr>
+                            
+                            <td colspan="4" class="td-result">Total Heures</td>
+                            <td class="td-sum" id="result">##h##</td>
+                                                        
+                        </tr>
+
+
+                    </table>
+
+
+                </div>
+        
+
+            </div>
+        </div>   
+        
+    </div>
+	
+</body>
+</html>

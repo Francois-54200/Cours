@@ -1,0 +1,15 @@
+.className{
+    background-color: blue;
+    height: 50px;
+    width: auto;
+    /*text-align: center;*/
+        
+}
+.className.active{
+    background-color: tomato;
+}
+#nav{
+    width: auto;
+    height: 50px;
+    background-color: transparent;
+}

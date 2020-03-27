@@ -1,0 +1,89 @@
+.contener{
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 500px;
+    height: 800px;
+    position: absolute;
+    border-radius: 10px;
+    font-size: 25px; 
+}
+
+.photo{
+    
+    border: solid 2px black;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    flex-direction: row;
+    margin-top: 90px;
+    margin-left: 125px;
+}
+
+.text{
+    position: absolute;
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*width: auto;*/
+    margin-left: 50px;
+    
+}
+
+.texte{
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.voile{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    font-size: 60px;
+    border-radius: 20px;
+    /*margin-top: 105px;
+    margin-left: 105px;*/
+   /*text-align: center;
+    vertical-align: middle;*/
+    background-color: crimson;
+    opacity: 0;
+    
+}
+.voile:hover{
+    opacity: 0.8;
+}
+/*.fa-motorcycle{
+    background: blue;
+}*/
+
+
+/*.photo:hover{
+    opacity: 0.8;
+    background: blue;
+}*/
+
+.image{
+    border-radius: 20px;
+}
+
+.titre{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 25px;    
+    margin-top: 200px;
+    margin-left: 50px;
+    /*border: solid 1px black;*/
+    width: 80%;
+}
+.titre *{
+    display: block;
+width: 36%;
+border: solid 1px black;
+}

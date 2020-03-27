@@ -1,0 +1,100 @@
+
+.wrap{
+	position:relative;
+	height:100%;
+	width:100%;
+}
+
+.container{
+	width:calc(100% - 170px);
+	float:right;
+}
+.side{
+	position:relative;
+	top:200px;
+}
+
+/* déclaration des class */
+.img-responsive{}
+
+.bg-fullscreen{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+}
+
+.bg-page{
+	background-image:url("./images/lac.jpg");
+	background-position:center;
+	background-size:cover;
+}
+
+/* déclaration des id */
+#image{}
+
+
+/* déclaration des balises */
+h1{
+	font-size:600%
+}
+
+
+/* déclaration multiples */
+
+
+h1, .h1{
+	font-size:400%;
+}
+.main-title{
+	background-color:#ff9933;
+	border:5px solid #e67300;
+	border-radius:40px;
+	margin:10px 60px;
+	padding:10px;
+}
+.text-center{
+	text-align:center;
+}
+.img-responsive{
+	width:100%;
+	height:auto;
+}
+.img-background{
+	background:#987654;
+}
+.img-position{
+	padding:25px;
+	border:2px solid #ccc;
+	border-radius:8px;
+}
+.pull-right{
+	width:100%;
+	text-align:right;
+}
+.sommaire{
+	background:#963258;
+	border:2px solid #963258;
+	border-radius:8px;
+	color:#ffffff;
+}
+.sommaire a{
+	color:#019789;
+}
+.som-position{
+	float:left;
+	position:absolute;
+	padding-right:25px;
+	top:100px;
+
+}
+
+/* position: relative;*/
+/* position: fixed;*/
+/* position: absolute;*/
+
+
+
+

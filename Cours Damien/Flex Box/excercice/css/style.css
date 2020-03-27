@@ -1,0 +1,47 @@
+body{
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	marging:0;
+	background-color:black;
+}
+
+header{
+	background-color:white;
+height:100px;
+	display:flex;
+	
+		
+}
+.monpremiersite{
+	background:yellow;
+	color:white;
+	line-height:100px;
+	margin:0;
+	font-size:20px;
+	
+	
+}
+
+.Langue{
+	font-size:20px;
+	margin:0;
+	line-height:100px;
+	
+}
+
+.Connexion{
+	font-size:20px;
+	margin:0;
+	line-height:100px;
+}
+
+.container{
+	flex-grow:1;
+	
+}
+
+footer{
+	height:100px;
+	background-color:blue;
+}

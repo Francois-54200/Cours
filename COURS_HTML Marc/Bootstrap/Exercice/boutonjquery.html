@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cours JQUERY pour la bonne pratiques des nouveaux sites">
+
+    <title>BJquery</title>
+
+    
+    <link href="./css/scriptbouttonjquery.css" rel="stylesheet">    
+    <script src="./js/jquery/jquery.min.js"></script>
+    
+    
+</head>
+<body>
+
+    <div class="className" id="idName">
+        <button id="idBtn">Afficher</button>
+    </div>
+
+    <div class="bouton">
+        <button id="cacher">cacher</button>
+        <button id="montrer">montrer</button>
+        <button id="pop">pop</button>
+    </div>
+
+    <script> 
+    $("#idBtn").click(function(e)
+    {
+      
+       if( $("#idName").hasClass("active")){
+        $("#idName").removeClass("active") 
+        $("#idBtn").text("afficher")
+       }else{
+        $("#idName").addClass("active");
+        $("#idBtn").text("cacher")
+       }
+          
+    });
+    </script>
+    
+    
+
+
+    <div class="className" id="nav">
+        <button id="nav">activer</button>
+
+        <script> src=$("#nav").click(function(e)
+        {
+            $("#nav").hasClass("active");
+            $("#nav").addClass("inactive");
+            $("#nav").removeClass("inactive");
+            
+            $("#nav").html("ajouter")
+        });
+        </script>
+    </div>
+
+
+    
+
+    
+    <script src="./js/scriptbouttonjquery.js"></script>
+
+</body>
+</html>

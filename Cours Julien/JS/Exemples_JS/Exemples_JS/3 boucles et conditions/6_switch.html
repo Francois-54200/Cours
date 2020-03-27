@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+ <html>
+<head>
+<meta charset="UTF-8">
+<title>
+	Exemple des boucles et conditions
+</title>
+
+</head>
+<body>
+<h1>Page de test des boucles et conditions</h1>
+<div id="test"> </div>
+<script>
+/**************************************/
+/*            Exemple 6               */
+/**************************************/
+
+
+var x = "break";
+
+switch (x) {
+	case "test":
+		document.getElementById("test").innerHTML+="X est bien la chaine de test<br/>";
+		break;
+	case "coucou":
+		document.getElementById("test").innerHTML+="X est plutôt la chaine coucou<br/>";
+		break;
+	default :
+		document.getElementById("test").innerHTML+="On ne sais pas trop ce qu'il c'est passé<br/>";
+		break;
+} 
+
+
+
+
+</script>
+</body>
+</html>

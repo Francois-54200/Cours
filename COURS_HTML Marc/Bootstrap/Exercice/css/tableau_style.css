@@ -1,0 +1,22 @@
+.page{
+    position: absolute;
+    display: flex;
+
+}
+
+header{
+    /*position: fixed;*/
+
+}
+
+
+/*.carousel-items{
+    width: 150px !important;
+
+    
+
+}
+
+.table{
+
+}

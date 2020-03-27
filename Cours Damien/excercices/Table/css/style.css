@@ -1,0 +1,19 @@
+td, th{
+	border:1px solid black;
+	text-align:center;
+	padding:5px;
+}
+.abc{
+	border-left:none;
+	border-bottom:none;
+}
+table{
+	border-collapse:collapse;
+}
+.red{
+	background-color:red;
+}
+.green{
+	background-color:green;
+}
+

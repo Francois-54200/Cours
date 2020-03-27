@@ -1,0 +1,10 @@
+body{
+    padding: 200px;
+}
+
+.transform{
+    width: 200px;
+    height: 200px;
+    transform: translate(400px);
+    background-color: blue;
+}
