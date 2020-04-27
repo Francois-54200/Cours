@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    
+    <script>
+        /*var marc ={
+            nom: 'Marc',
+            age: 17,
+            moyenne: 15
+        }*/
+
+        /*if (marc.age >=18 && marc.age <=25 || marc.age >70){
+            console.log('Bravo! tu as le droit au tarif réduit')
+            
+        }else {
+            console.log("Vous n'avez pas accès au tarif réduit")
+        }*/
+
+        /*switch (marc.age){
+            case 18:
+                console.log('Bravo! Tu as 18ans')
+                break
+            case 25:
+                console.log('Bravo')
+                break
+            default:
+                console.log ('bon anniv')
+        }*/
+
+        /*if (marc.age >=18){
+            console.log('Tu es majeur')
+        } else {
+            console.log('Tu es mineur')
+        }*/
+
+        /*console.log(marc.age >=18 ? 'Tu es majeur' : 'Tu es mineur')*/
+
+        /*
+       SI age >=18 ET age <=25 ALORS
+            bravo! tu as le droit au tarif réduit
+            SINON SI 
+       */ 
+
+
+       /*var i = 0
+       while (i < 11) {
+           console.log(i)
+           i = i + 1  //ou   i++, i +=1, i--
+       }
+
+       for(var j = 0; j < 11; j++){
+           console.log(j)
+       }
+
+       console.log('Salut')*/
+
+
+       /*var eleves = ['Jean', 'Marc', 'Marion', 'Antoine']
+
+       for(var i = 0; i < eleves.length; i++){
+           var eleve = eleves[i]
+        console.log('Bonjour ' + eleve)
+       }
+
+       var eleves = ['Jean', 'Marc', 'Marion', 'Antoine']
+
+       for(var i = eleves.length - 1; i >= 0; i--){
+           var eleve = eleves[i]
+        console.log('Bonjour ' + eleve)
+       }*/
+
+       // TANT QUE condition EST VRAI   ALORS
+
+
+
+       //TEST nombre premier
+
+       /*var nombre = 91
+
+       for (var i = 2; i < nombre; i++){
+           console.log(nombre % i === 0);
+           }*/
+       
+       /*var nombre = 97
+       var estPremier = true
+
+       for (var i = 2; i < nombre; i++){
+           if (nombre % i === 0) {
+               estPremier = false
+               console.log("Ce nombre n'est pas premier")
+               console.log(nombre + ' est divisible par ' + i)
+               break
+           }
+       }
+
+       if (estPremier){
+            console.log(nombre + 'est premier')
+        }*/
+
+        /*nombre EST PREMIER SI 
+       il n'est divisible que par 1 ou lui-même
+       nombre N'EST PAS PREMIER SI 
+       il est divisible par un nombre compris entre 2 et lui-même -1
+       */
+
+
+        //Excercies eleves
+
+        /*var eleves = [{
+            nom: 'Marc',
+            moyenne: 15
+        }, {
+            nom:'Marion',
+            moyenne: 8
+        }, {
+            nom: 'Antoine',
+            moyenne: 4
+        }]
+
+
+        for (var i = 0; i < eleves.length; i++) {
+            var eleve = eleves[i]
+            if (eleve.moyenne < 10) {
+                console.log(eleve.nom + " n'a pas la moyenne")
+            } else {
+                console.log(eleve.nom + " a la moyenne")
+            }
+        }*/
+
+
+        /*POUR CHAQUE eleve
+        SI moyenne < 10 ALORS
+            AFFICHER nom "n'a pas le moyenne
+            */
+
+
+
+
+        //Les Fonctions
+
+        /*function estPremier(nombre) {            //ou on peut l'écrire: var estPremier = function (nombre)......
+            for (var i = 2; i < nombre; i++){
+                if (nombre % i === 0) {
+                    return false
+                }
+            }
+            return true
+        }
+
+        function multiplie(a, b,) {
+            if (b ===undefined){
+                b = 1
+            }
+            return a * b
+        }*/
+
+
+
+        /*var classeA = [{
+            nom: 'Marc',
+            moyenne: 15
+        }, {
+            nom:'Marion',
+            moyenne: 8
+        }, {
+            nom: 'Antoine',
+            moyenne: 4
+        }]
+
+        var classeB = [{
+            nom: 'Alex',
+            moyenne: 15
+        }, {
+            nom:'Tom',
+            moyenne: 7
+        }, {
+            nom: 'Charlene',
+            moyenne: 14
+        }]
+
+        function afficheQuiALaMoyenne(eleves) {
+            for (var i = 0; i < eleves.length; i++){
+                var eleve = eleves[i]
+                if (eleve.moyenne >= 10 ) {
+                    console.log(eleve.nom + " a la moyenne")
+                }
+            }
+
+        }
+
+        afficheQuiALaMoyenne(classeA)
+        afficheQuiALaMoyenne(classeB)
+
+
+        for (var i = 0; i < eleves.length; i++) {
+            var eleve = eleves[i]
+            if (eleve.moyenne < 10) {
+                console.log(eleve.nom + " n'a pas la moyenne")
+            } else {
+                console.log(eleve.nom + " a la moyenne")
+            }
+        }*/
+
+
+        /*var classeA = [{
+            nom: 'Marc',
+            moyenne: 15
+        }, {
+            nom:'Marion',
+            moyenne: 8
+        }, {
+            nom: 'Antoine',
+            moyenne: 4
+        }]
+
+        var aLaMoyenne = function (eleves) {
+            var moyennes = []
+            for (var i =0; i < eleves.length; i++){
+                var eleve = eleves[i]
+                if (eleve.moyenne >=10){
+                    moyennes.push(eleve)
+                }
+            }
+
+            return moyennes
+        }
+
+        console.log(aLaMoyenne(classeA))*/
+        
+
+        var phrase = "La premier point auquel il faut faire attention est le choix de la propriété à modifier pour un élément HTML. Toutes les propriétés n'ont pas la même impact lors du rendu de la page"
+
+
+
+        /*ON SEPARE NOTRE PHRASE GRACE AUX ESPACES (split)
+        ON CREE un compteur (objet)
+        POUR CHAQUE mots
+            SI le mot est dans mon compteur (compteur[mot])
+                Je l'incrémente
+            SINON
+                Je lui assigne la valeur
+    AFFICHE  compteur (console.log)
+
+        
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+       
+
+       
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

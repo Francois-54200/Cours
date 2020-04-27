@@ -88,7 +88,6 @@ input, select, textarea {
 		background-size: 100% 100%;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
-		
 		background-color: #150C07;
 		line-height: 1.75em;
 		overflow-x: hidden;
@@ -349,6 +348,7 @@ input, select, textarea {
 		-ms-transition-delay: 0.5s;
 		transition-delay: 0.5s;
 		position: relative;
+		top: -70px;
 		z-index: 1;
 		width: -moz-min-content;
 		width: -webkit-min-content;
