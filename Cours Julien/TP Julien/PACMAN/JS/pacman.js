@@ -23,18 +23,14 @@ let maGrille = [
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
   ]
 
-/*
-  for (var i in monTab) {
-    var maLigneTab = document.createElement('tr')
-    for (var j in monTab[i]) {
-        var maCelluleTab = document.createElement('td')
-        maCelluleTab.innerHTML = monTab[i][j]
-        maLigneTab.appendChild(maCelluleTab)
+
+  for (let i in maGrille) {
+    let maLigneGrille = document.createElement('')
+    for (let j in maGrille[i]) {
+        let maCelluleGrille = document.createElement('div')
+        if
+        /*maCelluleGrille.innerHTML = maGrille[i][j]
+        maLigneGrille.appendChild(maCelluleGrille)*/
     }
-    document.getElementById('maTable').appendChild(maLigneTab)
+    document.getElementById('grille').appendChild(maLigneGrille)
 }
-var monTab = document.getElementById('maTable'); 
-monTab.style.backgroundColor = "#1A35FF"; 
-monTab.style.color = "white"; 
-monTab.style.fontSize = "20px";
-*/
