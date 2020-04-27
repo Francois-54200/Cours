@@ -23,7 +23,7 @@ let maGrille = [
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
   ]
 
-
+/*
   for (var i in monTab) {
     var maLigneTab = document.createElement('tr')
     for (var j in monTab[i]) {
@@ -37,3 +37,4 @@ var monTab = document.getElementById('maTable');
 monTab.style.backgroundColor = "#1A35FF"; 
 monTab.style.color = "white"; 
 monTab.style.fontSize = "20px";
+*/
