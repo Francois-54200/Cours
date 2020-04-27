@@ -6,13 +6,13 @@
 }
 
 .mur{
-    background-color: blue;
+    background-image: url('../img/mur.gif');
 }
 
 .sol{
-    background-color: black;
+    background-image: url('../img/sol.gif.gif');
 }
 
 .bonbon{
-    background-image: url('../pacman/img/mur.gif');
+    background-image: url('../img/bonbon.gif');
 }
