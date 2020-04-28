@@ -32,6 +32,14 @@ let maGrille = [
     direction:1
 }
 
+let fantome = {
+    //position de départ de Pacman sur la grille
+    y:11,
+    x:9,
+    //direction de départ de pacman (haut:4, bas:2, gauche:3, droite:1)
+    direction:1
+} 
+
     let score = 0
 
 function afficheGrille(){
@@ -104,13 +112,23 @@ function bougePacman(){
         pacman.y++
     }  // là pacman est dans un mur
 }
+
+    if(pacman.x>maGrille[0].length){ //pour faire passer pacman par le couloir de droite car il va plus loin que la grille
+        pacman.x=1
+    }
+
+    if(pacman.x<1){    // pour faire passer pacman dans le couloir de gauche a droite car la grille ne peut pas etre inferieure
+        pacman.x=maGrille[0].length
+    }
+
     if(maGrille[pacman.y-1][pacman.x-1]==2){
         maGrille[pacman.y-1][pacman.x-1]=1
         score=score+1  //ou score++
     }
+    
 }
 
-function appuiTouche(e){
+function appuiTouche(e){  //pour faire déplacer en appuyant sur les touches
     console.log(e.key)
     if(e.key=="z"){
         pacman.direction=4

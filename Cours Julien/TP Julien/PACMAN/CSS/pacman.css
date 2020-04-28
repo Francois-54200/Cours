@@ -21,3 +21,8 @@
     background-image: url('../img/pacman4.gif');
     z-index: 1000;  
 }
+
+.fantome{
+    background-image: url('../img/fantome_vert1.gif');
+    z-index: 900;  
+}
