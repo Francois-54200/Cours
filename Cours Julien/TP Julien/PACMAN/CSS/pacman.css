@@ -16,3 +16,8 @@
 .bonbon{
     background-image: url('../img/bonbon.gif');
 }
+
+.pacman{
+    background-image: url('../img/pacman4.gif');
+    z-index: 1000;  
+}
