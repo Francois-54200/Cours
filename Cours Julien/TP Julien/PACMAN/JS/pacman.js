@@ -40,27 +40,27 @@ let maGrille = [
     direction:1
 } */
 
-    let TabFantome = [      //pour afficher plusieurs fantomes, il faut faire un tableau
+    let TabFantome(numFant) = [      //pour afficher plusieurs fantomes, il faut faire un tableau
         {
-            nom:"fantome"
+            nom:"fantome",
             y:11,
             x:10,
             direction:1
-        }
+        },
         {
-            nom:"fantome1"
+            nom:"fantome1",
             y:11,
             x:8,
             direction:1
-        }
+        },
         {
-            nom:"fantome2"
+            nom:"fantome2",
             y:10,
             x:9,
             direction:1
-        }
+        },
         {
-            nom:"fantome0"
+            nom:"fantome0",
             y:12,
             x:9,
             direction:1
@@ -89,7 +89,6 @@ for (let i in maGrille) {
     maConsoleGrille.style.gridColumn=parseInt(j)+1
     document.getElementById('grille').appendChild(maConsoleGrille)    
     }
-    
 }
 }
 
@@ -121,7 +120,6 @@ function afficheFantome(numFant){   //pour plusieurs fantomes
 }
 
 function bougePacman(){
-
     
     if (pacman.direction == 1){
         pacman.x++
@@ -170,12 +168,11 @@ function bougePacman(){
         maGrille[pacman.y-1][pacman.x-1]=1
         score=score+1  //ou score++
     }
-    
 }
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
-  }
+}
 
 /*function bougeFantome(){    //Pour un seul fantome
 
@@ -215,8 +212,6 @@ function getRandomInt(max) {
         }  
     }
      // là le fantome est dans un mur
-
-    
 }*/
 
 function bougeFantome(numFant){    //Pour avoir plusieurs fantomes
@@ -257,8 +252,6 @@ function bougeFantome(numFant){    //Pour avoir plusieurs fantomes
         }  
     }
      // là le fantome est dans un mur
-
-    
 }
 
 function appuiTouche(e){  //pour faire déplacer en appuyant sur les touches
@@ -277,8 +270,8 @@ function appuiTouche(e){  //pour faire déplacer en appuyant sur les touches
     }
 }
 
-function GameOver(){
-    if(pacman.x==fantome.x && pacman.y==fantome.y) {
+function GameOver(numFant){
+    if(pacman.x==TabFantome[numFant].x && pacman.y==TabFantome[numFant].y){
         alert("Pacman is dead")
         return true
     }
@@ -288,7 +281,6 @@ function GameOver(){
 
 function afficheScore(){
     document.getElementById('score').innerHTML=score
-
 }
 
 function Victoire(){
@@ -299,7 +291,6 @@ function Victoire(){
             if (maGrille[i][j]==2) {
                 compteur++
             }
-            
 }
 }
 if (compteur==0){
@@ -309,21 +300,23 @@ if (compteur==0){
     return false
 }
 
-
 function refresh(){
     let onContinue = true
     
     bougePacman()
-    if(GameOver()){onContinue = false}
-    for(let i in tabFantome)
+    
+    for(let i in TabFantome)
     {
+    if(GameOver(i)) {onContinue = false}
     bougeFantome(i)
+        //bougeFantome()    pour un seul fantome
+    if(GameOver(i)){onContinue = false}
     }
-    //bougeFantome()    pour un seul fantome
-    if(GameOver()){onContinue = false}
     afficheGrille()
     affichePacman()
-    afficheFantome()    
+    for(let i in TabFantome){
+    TabFantome(i)
+    }    
     afficheScore()
     Victoire()
     if (Victoire()){onContinue = false}
@@ -331,4 +324,3 @@ function refresh(){
 }
 refresh()
 document.body.addEventListener("keydown",appuiTouche)
-
