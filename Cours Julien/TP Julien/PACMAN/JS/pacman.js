@@ -315,7 +315,11 @@ function refresh(){
     
     bougePacman()
     if(GameOver()){onContinue = false}
-    bougeFantome()
+    for(let i in tabFantome)
+    {
+    bougeFantome(i)
+    }
+    //bougeFantome()    pour un seul fantome
     if(GameOver()){onContinue = false}
     afficheGrille()
     affichePacman()
