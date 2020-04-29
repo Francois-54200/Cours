@@ -102,11 +102,20 @@ function affichePacman(){
     
 }
 
-function afficheFantome(numFant){
+/*function afficheFantome(){       //Pour un seul fantome
     var myFantome = document.createElement('div') //créé une div
     myFantome.classList.add('fantome') //ajout de la classe fantome a la div
     myFantome.style.gridRow=fantome.y   // permet d'écrire comme si c'était dans le css
     myFantome.style.gridColumn=fantome.x
+    document.getElementById('grille').appendChild(myFantome) //on ajoute la div fantome dans grille
+    
+}*/
+
+function afficheFantome(numFant){   //pour plusieurs fantomes
+    var myFantome = document.createElement('div') //créé une div
+    myFantome.classList.add('fantome') //ajout de la classe fantome a la div
+    myFantome.style.gridRow=TabFantome[numFant].y   // permet d'écrire comme si c'était dans le css
+    myFantome.style.gridColumn=TabFantome[numFant].x
     document.getElementById('grille').appendChild(myFantome) //on ajoute la div fantome dans grille
     
 }
@@ -168,7 +177,7 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-function bougeFantome(numFant){
+/*function bougeFantome(){    //Pour un seul fantome
 
     fantome.direction=getRandomInt(4)
     
@@ -203,6 +212,48 @@ function bougeFantome(numFant){
     
         else if (fantome.direction ==4) {
             fantome.y++
+        }  
+    }
+     // là le fantome est dans un mur
+
+    
+}*/
+
+function bougeFantome(numFant){    //Pour avoir plusieurs fantomes
+
+    TabFantome[numFant].direction=getRandomInt(4)
+    
+    if (TabFantome[numFant].direction == 1){
+        TabFantome[numFant].x++
+    }
+
+    else if (TabFantome[numFant].direction ==2) {
+        TabFantome[numFant].y++
+    }
+
+    else if (TabFantome[numFant].direction ==3) {
+        TabFantome[numFant].x--
+    }
+
+    else if (TabFantome[numFant].direction ==4) {
+        TabFantome[numFant].y--
+    }
+    if(maGrille[TabFantome[numFant].y-1][TabFantome[numFant].x-1]==0)
+    {
+        if (TabFantome[numFant].direction == 1){
+            TabFantome[numFant].x--
+        }
+    
+        else if (TabFantome[numFant].direction ==2) {
+            TabFantome[numFant].y--
+        }
+    
+        else if (TabFantome[numFant].direction ==3) {
+            TabFantome[numFant].x++
+        }
+    
+        else if (TabFantome[numFant].direction ==4) {
+            TabFantome[numFant].y++
         }  
     }
      // là le fantome est dans un mur
