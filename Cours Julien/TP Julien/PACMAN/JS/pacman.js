@@ -32,13 +32,40 @@ let maGrille = [
     direction:1
 }
 
-let fantome = {
+/*let fantome = {       //seulement pôur afficher un seul fantome
     //position de départ de Pacman sur la grille
     y:11,
     x:10,
     //direction de départ de pacman (haut:4, bas:2, gauche:3, droite:1)
     direction:1
-} 
+} */
+
+    let TabFantome = [      //pour afficher plusieurs fantomes, il faut faire un tableau
+        {
+            nom:"fantome"
+            y:11,
+            x:10,
+            direction:1
+        }
+        {
+            nom:"fantome1"
+            y:11,
+            x:8,
+            direction:1
+        }
+        {
+            nom:"fantome2"
+            y:10,
+            x:9,
+            direction:1
+        }
+        {
+            nom:"fantome0"
+            y:12,
+            x:9,
+            direction:1
+        }
+    ]
 
     let score = 0
 
@@ -75,7 +102,7 @@ function affichePacman(){
     
 }
 
-function afficheFantome(){
+function afficheFantome(numFant){
     var myFantome = document.createElement('div') //créé une div
     myFantome.classList.add('fantome') //ajout de la classe fantome a la div
     myFantome.style.gridRow=fantome.y   // permet d'écrire comme si c'était dans le css
@@ -141,7 +168,7 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-function bougeFantome(){
+function bougeFantome(numFant){
 
     fantome.direction=getRandomInt(4)
     
@@ -226,7 +253,9 @@ function Victoire(){
 }
 if (compteur==0){
     alert("The Winner is Me")
+    return true
 }
+    return false
 }
 
 
@@ -242,6 +271,7 @@ function refresh(){
     afficheFantome()    
     afficheScore()
     Victoire()
+    if (Victoire()){onContinue = false}
     if (onContinue==true){setTimeout(refresh, 250)}
 }
 refresh()

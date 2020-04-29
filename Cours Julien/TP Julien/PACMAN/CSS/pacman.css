@@ -26,3 +26,18 @@
     background-image: url('../img/fantome3.gif');
     z-index: 900;  
 }
+
+.fantome1{
+    background-image: url('../img/fantome1.gif');
+    z-index: 900;
+}
+
+.fantome2{
+    background-image: url('../img/fantome2.gif');
+    z-index: 900;
+}
+
+.fantome0{
+    background-image: url('../img/fantome0.gif');
+    z-index: 900;
+}
