@@ -35,7 +35,7 @@ let maGrille = [
 let fantome = {
     //position de départ de Pacman sur la grille
     y:11,
-    x:9,
+    x:10,
     //direction de départ de pacman (haut:4, bas:2, gauche:3, droite:1)
     direction:1
 } 
@@ -72,6 +72,15 @@ function affichePacman(){
     myPacman.style.gridRow=pacman.y   // permet d'écrire comme si c'était dans le css
     myPacman.style.gridColumn=pacman.x
     document.getElementById('grille').appendChild(myPacman) //on ajoute la div pacman dans grille
+    
+}
+
+function afficheFantome(){
+    var myFantome = document.createElement('div') //créé une div
+    myFantome.classList.add('fantome') //ajout de la classe fantome a la div
+    myFantome.style.gridRow=fantome.y   // permet d'écrire comme si c'était dans le css
+    myFantome.style.gridColumn=fantome.x
+    document.getElementById('grille').appendChild(myFantome) //on ajoute la div fantome dans grille
     
 }
 
@@ -128,6 +137,52 @@ function bougePacman(){
     
 }
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
+function bougeFantome(){
+
+    fantome.direction=getRandomInt(4)
+    
+    if (fantome.direction == 1){
+        fantome.x++
+    }
+
+    else if (fantome.direction ==2) {
+        fantome.y++
+    }
+
+    else if (fantome.direction ==3) {
+        fantome.x--
+    }
+
+    else if (fantome.direction ==4) {
+        fantome.y--
+    }
+    if(maGrille[fantome.y-1][fantome.x-1]==0)
+    {
+        if (fantome.direction == 1){
+            fantome.x--
+        }
+    
+        else if (fantome.direction ==2) {
+            fantome.y--
+        }
+    
+        else if (fantome.direction ==3) {
+            fantome.x++
+        }
+    
+        else if (fantome.direction ==4) {
+            fantome.y++
+        }  
+    }
+     // là le fantome est dans un mur
+
+    
+}
+
 function appuiTouche(e){  //pour faire déplacer en appuyant sur les touches
     console.log(e.key)
     if(e.key=="z"){
@@ -144,23 +199,51 @@ function appuiTouche(e){  //pour faire déplacer en appuyant sur les touches
     }
 }
 
+function GameOver(){
+    if(pacman.x==fantome.x && pacman.y==fantome.y) {
+        alert("Pacman is dead")
+        return true
+    }
+    return false 
+}
+    
+
 function afficheScore(){
     document.getElementById('score').innerHTML=score
 
 }
 
+function Victoire(){
+    let compteur=0
+    for (let i in maGrille) {
+        for (let j in maGrille[i]) {
+            
+            if (maGrille[i][j]==2) {
+                compteur++
+            }
+            
+}
+}
+if (compteur==0){
+    alert("The Winner is Me")
+}
+}
+
 
 function refresh(){
-    setTimeout(refresh, 550)
+    let onContinue = true
+    
     bougePacman()
+    if(GameOver()){onContinue = false}
+    bougeFantome()
+    if(GameOver()){onContinue = false}
     afficheGrille()
-    affichePacman()    
+    affichePacman()
+    afficheFantome()    
     afficheScore()
-
-   // console.log("je rafraichi ma page")
+    Victoire()
+    if (onContinue==true){setTimeout(refresh, 250)}
 }
 refresh()
 document.body.addEventListener("keydown",appuiTouche)
-
-
 
