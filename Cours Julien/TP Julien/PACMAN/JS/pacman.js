@@ -468,8 +468,6 @@ bougeFantome(){
 }
 
 
-
-
 refresh()
-myPacman=affichePacman
-myFantome=afficheFantome
+myPacman.affichePacman()
+myFantome.afficheFantome()
