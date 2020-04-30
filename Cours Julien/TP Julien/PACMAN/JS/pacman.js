@@ -1,3 +1,4 @@
+
 let maGrille = [
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
     [0,2,2,2,2,2,2,2,2,0,2,2,2,2,2,2,2,2,0],
@@ -427,41 +428,41 @@ for(let i in TabFantome)
 {
     TabFantome[i].afficheFantome()
 }
-bougeFantome(numFant){
 
-    TabFantome[numFant].direction=getRandomInt(4)
+bougeFantome(){
+    this.direction=getRandomInt(4)
     
-    if (TabFantome[numFant].direction == 1){
-        TabFantome[numFant].x++
+    if (this.direction == 1){
+        this.x++
     }
 
-    else if (TabFantome[numFant].direction ==2) {
-        TabFantome[numFant].y++
+    else if (this.direction ==2) {
+        this.y++
     }
 
-    else if (TabFantome[numFant].direction ==3) {
-        TabFantome[numFant].x--
+    else if (this.direction ==3) {
+        this.x--
     }
 
-    else if (TabFantome[numFant].direction ==4) {
-        TabFantome[numFant].y--
+    else if (this.direction ==4) {
+        this.y--
     }
-    if(maGrille[TabFantome[numFant].y-1][TabFantome[numFant].x-1]==0)
+    if(maGrille[this.y-1][this.x-1]==0)
     {
-        if (TabFantome[numFant].direction == 1){
-            TabFantome[numFant].x--
+        if (this.direction == 1){
+            this.x--
         }
     
-        else if (TabFantome[numFant].direction ==2) {
-            TabFantome[numFant].y--
+        else if (this.direction ==2) {
+            this.y--
         }
     
-        else if (TabFantome[numFant].direction ==3) {
-            TabFantome[numFant].x++
+        else if (this.direction ==3) {
+            this.x++
         }
     
-        else if (TabFantome[numFant].direction ==4) {
-            TabFantome[numFant].y++
+        else if (this.direction ==4) {
+            this.y++
         }  
     }
 }
@@ -471,3 +472,4 @@ bougeFantome(numFant){
 
 refresh()
 myPacman=affichePacman
+myFantome=afficheFantome
