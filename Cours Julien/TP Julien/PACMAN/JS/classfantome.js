@@ -15,6 +15,20 @@ class Fantome {
         myFantome.classList.add('fantome')
         myFantome.style.gridRow = this.Y
         myFantome.style.gridColumn = this.X
+
+        if(this.Nom==0){
+              myFantome.class='fantome0';
+        
+          }
+            else if(this.Nom==1){
+                myFantome.class='fantome1';
+        
+          }
+            if(this.Nom==2){
+                myFantome.class='fantome2';
+        
+          }
+
         document.getElementById('grille').appendChild(myFantome)
 
     }

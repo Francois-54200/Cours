@@ -23,7 +23,7 @@ let maGrille = [    //grille
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
   ]
 
-    let myPacman = new pacman(5, 2, 1)
+    let myPacman = new pacman(1, 2, 1)
 
     let TabFantome = [ new Fantome("fantome",11,10,1), new Fantome("fantome1",11,8,1), new Fantome("fantome2",10,9,1), new Fantome("fantome0",12,9,1)]
     
@@ -79,7 +79,7 @@ function GameOver(numFant){
     }
     return false 
 }
-    
+
 
 function afficheScore(){
     document.getElementById('score').innerHTML=score
