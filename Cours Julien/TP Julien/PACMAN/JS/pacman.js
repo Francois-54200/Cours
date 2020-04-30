@@ -40,7 +40,7 @@ let maGrille = [
     direction:1
 } */
 
-    let TabFantome(numFant) = [      //pour afficher plusieurs fantomes, il faut faire un tableau
+    let TabFantome = [      //pour afficher plusieurs fantomes, il faut faire un tableau
         {
             nom:"fantome",
             y:11,
@@ -315,7 +315,7 @@ function refresh(){
     afficheGrille()
     affichePacman()
     for(let i in TabFantome){
-    TabFantome(i)
+    afficheFantome(i)
     }    
     afficheScore()
     Victoire()
@@ -324,3 +324,150 @@ function refresh(){
 }
 refresh()
 document.body.addEventListener("keydown",appuiTouche)
+
+
+
+//Pacman en version class
+
+
+class pacman {
+    Y;
+    X;
+    Direction;
+constructor(x, y, direction)
+{
+    this.X=x
+    this.Y=y
+    this.Direction=direction
+}
+affichePacman(){
+    myPacman = document.createElement('div')
+    myPacman.classList.add('pacman')
+    myPacman.style.gridRow=this.Y
+    myPacman.style.gridColumn=this.X
+    document.getElementById('grille').appendChild(myPacman)
+}
+bougePacman(){
+    if (this.Direction == 1){
+        this.X++
+    }
+
+    else if (this.Direction ==2) {
+        this.Y++
+    }
+
+    else if (this.Direction ==3) {
+        this.X--
+    }
+
+    else if (this.Direction ==4) {
+        this.Y--
+    }
+        
+    if(maGrille[this.Y-1][this.X-1]==0)
+{
+    if (this.Direction == 1){
+        this.X--
+    }
+
+    else if (this.Direction ==2) {
+        this.Y--
+    }
+
+    else if (this.Direction ==3) {
+        this.X++
+    }
+
+    else if (this.Direction ==4) {
+        this.Y++
+    }
+}
+
+    if(this.X>maGrille[0].length){ 
+        this.X=1
+    }
+
+    if(this.X<1){  
+        this.X=maGrille[0].length
+    }
+
+    if(maGrille[this.Y-1][this.X-1]==2){
+        maGrille[this.Y-1][this.X-1]=1
+        score=score+1 
+    }
+}
+}
+
+class Fantome{
+    Nom;
+    Y;
+    X;
+    Direction;
+constructor (nom, y, x, direction)
+{
+    this.Nom=nom;
+    this.X=x;
+    this.Y=y;
+    this.Direction=direction;
+}
+
+afficheFantome(){
+    myFantome = document.createElement('div')
+    myFantome.classList.add('fantome')
+    myFantome.style.gridRow=this.Y
+    myFantome.style.gridColumn=this.X
+    document.getElementById('grille').appendChild(myFantome)
+    
+}
+}
+
+let TabFantome = [ new Fantome("fantome",11,10,1), new Fantome("fantome1",11,8,1), new Fantome("fantome2",10,9,1), new Fantome("fantome0",12,9,1)]
+
+for(let i in TabFantome)
+{
+    TabFantome[i].afficheFantome()
+}
+bougeFantome(numFant){
+
+    TabFantome[numFant].direction=getRandomInt(4)
+    
+    if (TabFantome[numFant].direction == 1){
+        TabFantome[numFant].x++
+    }
+
+    else if (TabFantome[numFant].direction ==2) {
+        TabFantome[numFant].y++
+    }
+
+    else if (TabFantome[numFant].direction ==3) {
+        TabFantome[numFant].x--
+    }
+
+    else if (TabFantome[numFant].direction ==4) {
+        TabFantome[numFant].y--
+    }
+    if(maGrille[TabFantome[numFant].y-1][TabFantome[numFant].x-1]==0)
+    {
+        if (TabFantome[numFant].direction == 1){
+            TabFantome[numFant].x--
+        }
+    
+        else if (TabFantome[numFant].direction ==2) {
+            TabFantome[numFant].y--
+        }
+    
+        else if (TabFantome[numFant].direction ==3) {
+            TabFantome[numFant].x++
+        }
+    
+        else if (TabFantome[numFant].direction ==4) {
+            TabFantome[numFant].y++
+        }  
+    }
+}
+
+
+
+
+refresh()
+myPacman=affichePacman
