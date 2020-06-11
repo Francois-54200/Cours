@@ -10,5 +10,3 @@ class Post_it {
         this.hauteur = hauteur;
         this.Couleurdefond = Couleurdefond;
     }
-
-    
